@@ -2,16 +2,6 @@ import sys
 import re
 
 
-def custom_sqrt(delta):
-    half = delta / 2
-    limit = half + 1
-    while (half != limit):
-        x = delta / half
-        limit = half
-        half = (half + x) / 2
-    return half
-
-
 def delta_is_below_zero(delta, coefficient):
     print("Discriminant is strictly negative, the two complexe solutions are:\n")
     a = 0
@@ -35,7 +25,7 @@ def delta_is_above_zero(delta, coefficient):
     b = 0
     x_one = 0
     x_two = 0
-    square = 0 if delta == 0 else custom_sqrt(delta)
+    square = 0 if delta == 0 else delta ** 0.5
     print("Discriminant is strictly positive, the two solutions are:")
     for elem in coefficient:
         if elem[0] == 1:
