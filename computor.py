@@ -116,7 +116,7 @@ def degree_is_below_two(degree, coefficient):
     deno = (-1) * b
     if degree == 0:
         if coefficient[0][1] != 0:
-            print("The solution is : " + str(c))
+            print("There is no solution")
         else:
             print("All real numbers are solution.")
     elif degree == 1:
